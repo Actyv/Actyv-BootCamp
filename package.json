@@ -1,27 +1,42 @@
 {
   "name": "database",
   "version": "1.0.0",
-  "description": "This is the database configuration of the bootcamp.",
+  "description": "Error handling",
   "main": "app.js",
   "bin": {
     "database": "www.js"
   },
   "scripts": {
     "start": "node ./bin/www",
-    "server": "nodemon ./bin/www"
+    "server": "nodemon ./bin/www",
+    "test": "mocha --timeout 10000"
   },
   "keywords": [
     "mongoose",
-    "express"
+    "express",
+    "mocha",
+    "chai",
+    "http-status-codes"
   ],
   "author": "Sai Kumar",
   "license": "MIT",
   "dependencies": {
+    "@log4js-node/logstash-http": "^1.0.0",
+    "assert": "^2.0.0",
     "dotenv": "^8.1.0",
+    "expect": "^24.9.0",
     "express": "^4.17.1",
-    "mongoose": "^5.7.1"
+    "http-status-codes": "^1.3.2",
+    "log4js": "^5.1.0",
+    "mongoose": "^5.7.1",
+    "mongoose-explain": "^0.2.2",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.1",
     "nodemon": "^1.19.3"
   }
 }
