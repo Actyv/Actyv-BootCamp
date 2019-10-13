@@ -18,7 +18,8 @@ const users = require("./routes/index");
  */
 require("./connection/mongoose");
 
-app.use(express.json())
+app.use(express.json());
+
 app.use("/users", users);
 
 module.exports = app;

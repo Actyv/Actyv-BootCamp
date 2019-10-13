@@ -3,7 +3,7 @@
  */
 const mongoose = require("mongoose");
 
-var explain = require('mongoose-explain');
+var explain = require("mongoose-explain");
 
 /**
  * Extracting Schema property from mongoose.
@@ -28,7 +28,7 @@ const userSchema = new Schema({
    */
 
   firstName: {
-    type: String,
+    type: String
   },
 
   /**
@@ -36,12 +36,12 @@ const userSchema = new Schema({
    */
 
   lastName: {
-    type: String,
+    type: String
   },
 
   address: {
     city: {
-      type: String,
+      type: String
       // index: true
     },
     street: {
@@ -50,10 +50,10 @@ const userSchema = new Schema({
     state: {
       type: String
     }
-  },
+  }
 });
 
-userSchema.plugin(explain);
+// userSchema.plugin(explain);
 
 module.exports.userSchema = userSchema;
 

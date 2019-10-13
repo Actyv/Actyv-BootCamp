@@ -3,9 +3,12 @@
  */
 const { User } = require("../schema/index");
 const { logger } = require("../Logger/index");
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 const HttpStatus = require("http-status-codes");
-const { UserNotFoundException, MongooseConnectionError } = require("../utils/custom.errors")
+const {
+  UserNotFoundException,
+  MongooseConnectionError
+} = require("../utils/custom.errors");
 
 module.exports.testUser = (req, res) => {
   res.json({ message: "Works" });
@@ -15,15 +18,15 @@ module.exports.testUser = (req, res) => {
  * Creating the new user
  */
 module.exports.createUser = (req, res) => {
-
   // Creating a user object from frontend data
   User.create(req.body, (err, user) => {
     if (err) {
       return res.status(HttpStatus.NOT_ACCEPTABLE).json(err);
     }
-    return res.status(HttpStatus.OK).json({ message: "User Registered Successfully" });
-  })
-
+    return res
+      .status(HttpStatus.OK)
+      .json({ message: "User Registered Successfully" });
+  });
 };
 
 /*------------------------------READ OPERATIONS--------------------------*/
@@ -31,32 +34,32 @@ module.exports.createUser = (req, res) => {
 /**
  * Reading the existing user using request parameters.
  */
-module.exports.readUser = async (req, res) => {
-
+module.exports.readUser = async (req, res, next) => {
   try {
-
     // readyState to check if mongoose connection is open
-    const { readyState } = mongoose.connection
+    const { readyState } = mongoose.connection;
 
     // throw MongooseConnectionError if readyState is 0 means connection is not established
-    if (readyState === 0) throw MongooseConnectionError("MongoDB Not Connected")
+    if (readyState === 0)
+      throw MongooseConnectionError("MongoDB Not Connected");
 
     // Find user with given id
-    const user = await User.find({ "address.city": req.params.name })
+    const user = await User.find({ _id: req.params.id });
 
     // throw UserNotFoundException if user is null means user is not found
-    if (user === null) throw new UserNotFoundException(`User with id: ${req.params.id} not found.`)
+    if (user === null || user.length === 0)
+      throw new UserNotFoundException(
+        `User with id: ${req.params.id} not found.`
+      );
 
     // send user as response if user is found successfully
-    res.status(HttpStatus.OK).json({ user })
-
+    res.status(HttpStatus.OK).json({ user, message: "User Found" });
   } catch (e) {
-
     switch (true) {
-
       // catch MongooseConnectionError if connection with mongoDB is not open
       case e instanceof MongooseConnectionError:
-        logger.error(e.name, e.message)
+        console.log(e.name);
+        logger.error(e.name, e.message);
         break;
 
       // catch CastError when id is invalid
@@ -68,10 +71,16 @@ module.exports.readUser = async (req, res) => {
       case e instanceof UserNotFoundException:
         logger.error(e.name, e.message);
         break;
-    }
-    res.status(HttpStatus.NOT_FOUND).json({ message: "User Not Found" })
-  }//spy pattern
 
+      default:
+        return res
+          .status(HttpStatus.NOT_FOUND)
+          .json({ message: "User Not Found" });
+    }
+    res.status(HttpStatus.NOT_FOUND).json({ message: "User Not Found" });
+  } finally {
+    next();
+  }
 };
 
 /**
@@ -79,7 +88,7 @@ module.exports.readUser = async (req, res) => {
  */
 module.exports.getByLastName = (req, res) => {
   // It was earlier defined as a static method inside methods/index.js
-  User.findByLastName("Ch", function (err, data) {
+  User.findByLastName("Ch", function(err, data) {
     try {
       if (data.length === 0 || err) throw err;
       res.status(HttpStatus.OK).json({ data });

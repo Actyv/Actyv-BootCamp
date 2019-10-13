@@ -16,7 +16,7 @@ router.post("/create", userController.createUser);
 /**
  * GET requests read a user by it's id
  */
-router.get("/read/:name", userController.readUser);
+router.get("/read/:id", userController.readUser);
 
 /**
  * GET requests read a last name of the user
