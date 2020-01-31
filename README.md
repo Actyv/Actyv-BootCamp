@@ -35,12 +35,12 @@ Hit `Shift+Cmd+P` in VSCode and click `Open Settings (JSON)` then append the fol
 
 ```
 {
-	"editor.fontSize": 26,
-	"editor.tabSize": 2,
-	"editor.wordWrap": "on",
-	"terminal.integrated.fontSize": 26,
-	"emmet.includeLanguages": {"javascript": "javascriptreact"},
-	"emmet.syntaxProfiles": {"javascript": "jsx"}
+    "editor.fontSize": 26,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "terminal.integrated.fontSize": 26,
+    "emmet.includeLanguages": {"javascript": "javascriptreact"},
+    "emmet.syntaxProfiles": {"javascript": "jsx"}
 }
 ```
 
@@ -54,11 +54,11 @@ Task for Day 1 will be to setup the environment like tools, plugins and run the 
 
  1. Download the required tools and plugins and subscribe to the above mentioned newsletters.
  2. Open [https://github.com/](https://github.com/) and create your account.
- 3. Download and Install Node.js from [here](https://nodejs.org/en/download/). After installing you will be able to acess node package manager (npm) globally.
+ 3. Download and Install Node.js from [here](https://nodejs.org/en/download/). After installing you will be able to access node package manager (npm) globally.
  4. Go through the following cheatsheet for shortcuts in VSCode.
-	 1. Windows: [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
-	 2.  macOS: [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
-	 3. Linux: [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
+     1. Windows: [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+     2.  macOS: [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+     3. Linux: [https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
   
   ### Walkthrough
   
@@ -110,23 +110,23 @@ Then what is the difference between `views/` and `public/` directory 🤔. Let's
 ### Next Steps
 
 1. Now it's time to install the packages defined in `package.json`. Run `npm install` in your terminal. Now `node_modules` folder will be created in your root directory. Don't forget to add this directory in `.gitignore`.
-2. Now you can run your server using `npm start` in your terminal. By default it will be hosted at `http://localhost:3000`. Visit the link and you will see the default page which express-generator uses. 
+2. Now you can run your server using `npm start` in your terminal. By default, it will be hosted at `http://localhost:3000`. Visit the link and you will see the default page which express-generator uses. 
 3. Now it's time to initialize this directory as a repository. Run the following github commands in order:
-	1. `git config --global user.name "[name]"`. Replace [name] with your GitHub username.
-	2. `git config --global user.email "[email address]"`. Replace [email address] with your email id used to create GitHub account.
-	3. `git init`
-	4. Now go to your github account on web and create a new repository. Use step 1 to step 6 from here: [https://help.github.com/en/articles/create-a-repo](https://help.github.com/en/articles/create-a-repo)
-	5. `git remote add origin [url]`.  Replace [url] with your repository url on web. Now your local repo is attached to the github repo.
-	6. Since there is already a `README.md` file present in your cloud repo, we should pull the changes first on cloud before commiting our owns. So now we have to run `git pull origin master`.
-	7. Now you will see a `README`.md file pulled from github to your local repo.
-	8. Now next step is to let github know which files to track. For this we will use the command `git add [filename]` or `git add .` to track all files. But there will be time we don't want some files/dirs to be pushed to cloud like node_modules and the .env file. So before tracking any files we will add a `.gitignore` file in the root directory. You can use [http://gitignore.io/](http://gitignore.io/) to generate content for .gitignore. Just type "Node" in [http://gitignore.io/](http://gitignore.io/) and hit "Create". Now copy this content to your .gitignore file and then run the command `git add .`. You will notice that the folder `node_modules` is blurred which indicates it is not being tracked by git.
-	9. Next step is to commit your changes. Run `git commit -am [message]`. Replace [message] with your own message.
-	10. Now run `git push origin master`. It will push your changes to github. Go to your browser and navigate to your repository and you will see your content there under `master` branch. We will learn more about branching later in this bootcamp.
-	11. Remember the order: pull --> add --> commit --> push.
+    1. `git config --global user.name "[name]"`. Replace [name] with your GitHub username.
+    2. `git config --global user.email "[email address]"`. Replace [email address] with your email id used to create GitHub account.
+    3. `git init`
+    4. Now go to your github account on web and create a new repository. Use step 1 to step 6 from here: [https://help.github.com/en/articles/create-a-repo](https://help.github.com/en/articles/create-a-repo)
+    5. `git remote add origin [url]`.  Replace [url] with your repository url on web. Now your local repo is attached to the github repo.
+    6. Since there is already a `README.md` file present in your cloud repo, we should pull the changes first on cloud before committing our owns. So now we have to run `git pull origin master`.
+    7. Now you will see a `README`.md file pulled from github to your local repo.
+    8. Now next step is to let github know which files to track. For this we will use the command `git add [filename]` or `git add .` to track all files. But there will be time we don't want some files/dirs to be pushed to cloud like node_modules and the .env file. So before tracking any files we will add a `.gitignore` file in the root directory. You can use [http://gitignore.io/](http://gitignore.io/) to generate content for .gitignore. Just type "Node" in [http://gitignore.io/](http://gitignore.io/) and hit "Create". Now copy this content to your .gitignore file and then run the command `git add .`. You will notice that the folder `node_modules` is blurred which indicates it is not being tracked by git.
+    9. Next step is to commit your changes. Run `git commit -am [message]`. Replace [message] with your own message.
+    10. Now run `git push origin master`. It will push your changes to github. Go to your browser and navigate to your repository and you will see your content there under `master` branch. We will learn more about branching later in this Bootcamp.
+    11. Remember the order: pull --> add --> commit --> push.
 
 ### Assignment
 
-Find out what the following npm packages does in `app.js`
+Find out what the following npm packages do in `app.js`
 
  1. path
  2. cookie-parser
@@ -144,7 +144,7 @@ Read this GitHub [cheatsheet](https://github.github.com/training-kit/downloads/g
 
 ## Day 2
 
-The tasks for day 2 is to create our own routes in express and learn how to use Postman to test those routes. We will also learn some basics of JADE templating here.
+The tasks for day 2 is to create our own routes in the express and learn how to use Postman to test those routes. We will also learn some basics of JADE templating here.
 
 ### Prerequisites
 
@@ -153,7 +153,7 @@ The tasks for day 2 is to create our own routes in express and learn how to use 
 
   ### Walkthrough
   
-1. First we will learn how does the express server knows to render `index.jade` or `index.html` when we hit `http://localhost:3000`.
+1. First we will learn how does the express server know to render `index.jade` or `index.html` when we hit `http://localhost:3000`.
 2. `http://localhost:3000` is the root route which is indicated by `/`. All other routes will be like this `http://localhost:3000/login` which will be indicated as `/login` in our express server.
 3. So for configuring root route we will use `/` and for further sub routes we will use `/routeName`.
 4. Now lets naviagate to routes folder with the structure as follows.
@@ -169,7 +169,7 @@ The tasks for day 2 is to create our own routes in express and learn how to use 
 
 ```
 router.get('/', function(req, res, next) {
-	res.render('index', { title:  'Express' });
+    res.render('index', { title:  'Express' });
 });
 ```
 In the above code present in `routes/index.js` we are using a `get` method present in `router` object which is used to listen to `GET` requests on this route.
@@ -183,8 +183,8 @@ Navigate to `views/index.jade` and you will see the below code there:
 
 ```
 block  content
-	h1= title
-	p Welcome to #{title}
+    h1= title
+    p Welcome to #{title}
 ```
 
 Keep in mind the indentation here. As you can see there are two ways to use the `title` property here which is paased before.
@@ -198,7 +198,7 @@ Instead of send a webpage if you want to send a json object to the frontend we u
 
 ```
 router.get('/', function(req, res, next) {
-	res.status(200).json({data: "some data here"})
+    res.status(200).json({data: "some data here"})
 });
 ```
 
@@ -226,13 +226,13 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 ```
 
-`app.use()` is a method we need to invoke middlewares. In first line we are telling our application to use routes in `indexRouter` wheenver someone hits the `/` route and in second we are telling the app to use `usersRouter` wheever someone hits the `/users` route.
+`app.use()` is a method we need to invoke middlewares. In first line we are telling our application to use routes in `indexRouter` whenever someone hits the `/` route and in second we are telling the app to use `usersRouter` whenever someone hits the `/users` route.
 
 Now let's create our own routes. Open `routes/users.js` and add the following code to it
 
 ```
 router.get('/info', function(req, res, next) {
-	res.status(200).json({data: "Welcome to Actyv!!"})
+    res.status(200).json({data: "Welcome to Actyv!!"})
 });
 ```
 Restart the server by killing it with `Ctrl+C` and running `npm start` again.
@@ -287,8 +287,8 @@ Now add the POST route as follows
 
 ```
 router.post('/add', function (req, res, next) {
-	console.info(req.body);
-	res.status(200).json({ message:  "Book Saved Successfully" });
+    console.info(req.body);
+    res.status(200).json({ message:  "Book Saved Successfully" });
 });
 ```
 
@@ -326,8 +326,8 @@ Now open postman. Since this is a POST request first change request type to POST
 
 ```
 {
-	"id": "1",
-	"name": "Harry Potter"
+    "id": "1",
+    "name": "Harry Potter"
 }
 ```
 
@@ -353,9 +353,9 @@ Now let's add another route as follows in `routes/books.js`
 
 ```
 router.get('/find/:id', function (req, res, next) {
-	const {id} = req.params
-	console.info(id);
-	res.status(200).json({ message:  "Book Found" });
+    const {id} = req.params
+    console.info(id);
+    res.status(200).json({ message:  "Book Found" });
 });
 ```
 
@@ -375,7 +375,7 @@ Create a form using JADE templating engine such that when I got to the route `ht
 
 Implement this with both request body and request params means in Case 1 the data will be in request body and Case 2 data will be in request params.
 
-Remember one thing, you have to use `/book/add` route only to implenent this.
+Remember one thing, you have to use `/book/add` route only to implement this.
 
 ## Day 4
 
@@ -388,13 +388,13 @@ In Day 4 we will learn how to connect to the database, write schemas and saving 
 3. Altlas will ask you to create a new database user. Create this user and remember the password.
 4. Then cliclk on `Choose a connection method` and under this choose `Connect your Application`.
 5. It will then give you a connection string. Copy and save it somewhere for now and replace `<password>` with your actual password in this string. Note: It is a bad practice to directly set password in this string. Later in this bootcamp we will learn how to use `Vault` for storing our secret keys.
-6. Now clone this repository https://github.com/Actyv/Actyv-BootCamp.git. Open a terminal in your preffered location and type `git clone https://github.com/Actyv/Actyv-BootCamp.git`.
+6. Now clone this repository https://github.com/Actyv/Actyv-BootCamp.git. Open a terminal in your preferred location and type `git clone https://github.com/Actyv/Actyv-BootCamp.git`.
 
 ### Walkthrough
 
 Let's start with introducing you with the environment variables.
 
-An `environment variable` is a variable whose value is set outside the program, typically through functionality built into the operating system or microservice. An environment variable is made up of a name/value pair, and any number may be created and available for reference at a point in time. Example:
+An `environment variable` is a variable whose value is set outside the program, typically through a functionality built into the operating system or microservice. An environment variable is made up of a name/value pair, and any number may be created and available for reference at a point in time. Example:
 
 `SECRET_KEY = "My secret key goes here!!!"`
 
@@ -402,11 +402,11 @@ During application initialization, these are loaded into `process.env` and acces
 
 `process.env.SECRET_KEY`
 
-For our application we will be using `dotenv` technique. This technique externalizes data by moving it from source code into environment variables in a `.env` file. 
+For our application, we will be using `dotenv` technique. This technique externalizes data by moving it from source code into environment variables in a `.env` file. 
 
 :bulb: ****Pro Tip :**** Add the `.env` file name to `.gitignore` which will prevents `git push` commands from uploading it to the GitHub repo where, for public repos, it would be available to anyone.
 
-**Initialize Database Connection :**
+**Initialize Database Connection:**
 
 Now open the cloned repo and move to branch `database/connection`. To do it just open your terminal and type `git checkout database/connection` and hit enter. Now you are in `database/connection` branch.
 
@@ -435,14 +435,14 @@ We will talk about this in detail. But for now just look at what is does. So `do
 
 ```
 mongoose.connect(process.env.mongoURI, {
-	useNewUrlParser:  true,
-	useUnifiedTopology:  true
+    useNewUrlParser:  true,
+    useUnifiedTopology:  true
 });
 ```
 
 Mongoose provides a connect method which takes two parameters as follows:
-	1. Mongo URI : Connection Url which you got from Atlas before.
-	2. options: Some MongoDB parameters.
+    1. Mongo URI : Connection Url which you got from Atlas before.
+    2. options: Some MongoDB parameters.
 
 You can read more about what parameters it supports from here: [https://mongoosejs.com/docs/connections.html](https://mongoosejs.com/docs/connections.html)
 
@@ -452,7 +452,7 @@ Now let's go through the Event Handlers which are as follows:
 
 ```
 mongoose.connection.on("connected", () => {
-	console.info("MongoDB connected Successfully!!");
+    console.info("MongoDB connected Successfully!!");
 });
 ```
 
@@ -460,7 +460,7 @@ mongoose.connection.on("connected", () => {
 
 ```
 mongoose.connection.on("error", err  => {
-	console.error(`Error in mongoose connection: ${err.message}`);
+    console.error(`Error in mongoose connection: ${err.message}`);
 });
 ```
 
@@ -475,9 +475,9 @@ console.info("Mongoose connection is disconnected");
 
 ```
 process.on("SIGINT", function() {
-	mongoose.connection.close(() => {
-		process.exit(0);
-	});
+    mongoose.connection.close(() => {
+        process.exit(0);
+    });
 });
 ```
 
@@ -521,7 +521,7 @@ Then we defined a user schema as follows:
 
 ```
 const userSchema = new Schema({
-	<property_name>: <property_type>
+    <property_name>: <property_type>
 })
 ```
 
@@ -529,7 +529,7 @@ Example:
 
 ```
 const userSchema = new Schema({
-	firstName: String
+    firstName: String
 })
 ```
 
@@ -537,9 +537,9 @@ This can also be written as follows:
 
 ```
 const userSchema = new Schema({
-	firstName: {
-		type: String
-	}
+    firstName: {
+        type: String
+    }
 })
 ```
 
@@ -547,10 +547,10 @@ The benefit of the above method is we can define other properties as well, like 
 
 ```
 const userSchema = new Schema({
-	firstName: {
-		type: String,
-		minlength: 6
-	}
+    firstName: {
+        type: String,
+        minlength: 6
+    }
 })
 ```
 
@@ -582,7 +582,7 @@ Change your branch to `database/schema-methods`
 
 You will see a new folder `methods` in the root directory. Open `methods/index.js`.
  
-As I said above theses methods (static, instance and virtuals) are applied on the schema rather than the model first setep will be to import that schema like below.
+As I said above theses methods (static, instance and virtuals) are applied on the schema rather than the model first step will be to import that schema like below.
 
 `const { userSchema } =  require("../schema/index");`
 
@@ -592,7 +592,7 @@ First let's see how to define **instance methods**. Consider the following piece
 
 ```
 userSchema.methods.getIfAdult  =  function() {
-	return  this.age >  18;
+    return  this.age >  18;
 };
 ```
 
@@ -602,7 +602,7 @@ Now you might also be wondering why I did not use arrow functions here like belo
 
 ```
 userSchema.methods.getIfAdult  = () => {
-	return  this.age >  18;
+    return  this.age >  18;
 };
 ```
 
@@ -614,21 +614,21 @@ Method 1:
 
 ```
 userSchema.statics.findByAge  =  function(age, callback) {
-	this.find({ age: age }, callback);
+    this.find({ age: age }, callback);
 };
 ```
 
 Method 2:
 ```
 userSchema.static("findByLastName", function(lastname, callback) {
-	this.find({ lastname: lastname }, callback);
+    this.find({ lastname: lastname }, callback);
 });
 ```
 
 Now let's see how can we implement **Virtuals**.
 ```
 userSchema.virtual("fullName").get(function() {
-	return this.firstname + " " + this.lastname;
+    return this.firstname + " " + this.lastname;
 });
 ```
 
@@ -663,7 +663,7 @@ If you remember we did routing like this:
 
 ```
 router.get('/info', function(req, res, next) {
-	res.status(200).json({data: "Welcome to Actyv!!"})
+    res.status(200).json({data: "Welcome to Actyv!!"})
 });
 ```
 
@@ -671,7 +671,7 @@ If we separate the callback function, it will become a controller like below.
 
 ```
 infoController = function(req, res, next) {
-	res.status(200).json({data: "Welcome to Actyv!!"})
+    res.status(200).json({data: "Welcome to Actyv!!"})
 }
 ```
 Now we can rewrite our route as below:
@@ -690,14 +690,14 @@ First the user schema is imported on the top. Let's dissect one controller.
 
 ```
 module.exports.readUser = (req, res) => {
-	User.findById(req.params.id, (err, user) => {
-	if (err){
-		return res
-			.status(HttpStatus.NOT_FOUND)
-			.json({ message: "Error fetching the user by id" });
-	}
-	res.status(HttpStatus.OK).json({ user });
-	});
+    User.findById(req.params.id, (err, user) => {
+    if (err){
+        return res
+            .status(HttpStatus.NOT_FOUND)
+            .json({ message: "Error fetching the user by id" });
+    }
+    res.status(HttpStatus.OK).json({ user });
+    });
 };
 ```
 
@@ -710,8 +710,8 @@ if there is some error we are using the response object to send a message to the
 
 ```
 return res
-		.status(HttpStatus.NOT_FOUND)
-		.json({ message: "Error fetching the user by id" });
+        .status(HttpStatus.NOT_FOUND)
+        .json({ message: "Error fetching the user by id" });
 ```
 
 But if user is found meaning error is null then we return the user found from id like below:
@@ -729,15 +729,15 @@ Now go to folder `routes/index.js`. Here all the routes are defined, we just sep
 3.  Create a report on all Http Statues
 4.  Create a profile page in jade template and add 5 fields like first name, last name, address , date of birth, phone and store them in the database.
 5. Create routes and controllers for the following:
-	1. Create an instance method to check if a person has birthday today.
-	2. Create a static method to fetch all users who are having birthday today.
-	3. Create a virtual property which will return full name ie first name + last name of the user.
+    1. Create an instance method to check if a person has birthday today.
+    2. Create a static method to fetch all users who are having birthday today.
+    3. Create a virtual property which will return full name ie first name + last name of the user.
 
 ## Day 5
 
 Today we will be doing authentication with [passport.js](http://www.passportjs.org/). Passport is authentication middleware for Node.js.
 
-First let me intorduce you to JSON WEB TOKENS (JWT) : JSON Web Tokens are an open, industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method for representing claims securely between two parties.
+First let me introduce you to JSON WEB TOKENS (JWT) : JSON Web Tokens are an open, industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method for representing claims securely between two parties.
 
 We will be using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) npm package.
 
@@ -750,7 +750,7 @@ We will be using [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) npm 
 
 The header  typically  consists of two parts: the type of token, which is JWT, and the hashing algorithm that is used, such as HMAC SHA256 or RSA.
 
-Default algorithm for jsonwebtoken package is **HS256**.
+Default algorithm for the json-web-token package is **HS256**.
 
 **Payload**
 
@@ -810,8 +810,8 @@ Then we need to define the options to use with the strategy. Example:
 
 ```
 const options = {
-	jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-	secretOrKey: process.env.JWT_SECRET
+    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+    secretOrKey: process.env.JWT_SECRET
 };
 ```
 
@@ -823,16 +823,16 @@ Now we have to use this jwt strategy in passport. The syntax for this is:
 
 ```
 passport.use(
-	new JWTStrategy(options, async function(jwtPayload, done) {
-		await User.findById({ _id:  jwtPayload.id })
-		.then(user => {
-			if (user) {
-				return done(null, user);
-			}
-			return  done(null, jwtPayload.id);
-		})
-		.catch(err => done(err));
-	});
+    new JWTStrategy(options, async function(jwtPayload, done) {
+        await User.findById({ _id:  jwtPayload.id })
+        .then(user => {
+            if (user) {
+                return done(null, user);
+            }
+            return  done(null, jwtPayload.id);
+        })
+        .catch(err => done(err));
+    });
 );
 ```
 
@@ -841,7 +841,7 @@ Here we are asking passport to use the JWT Strategy and we provide the strategy 
 **jwtPayload** is the same data we encoded in the json web token and
 **done** is the function which will call the next middleware. We will talk about it later.
 
-Now we have to initialise the passpoet. Open `app.js` in the root directory.
+Now we have to initialise the passport. Open `app.js` in the root directory.
 
 Now first we have to require the above strategy inside app.js like below:
 
@@ -855,9 +855,9 @@ When its done we just need to protect our routes. For this please first move to 
 
 ```
 router.get(
-	"/read",
-	passport.authenticate("jwt", { session: false }),
-	userController.readUser
+    "/read",
+    passport.authenticate("jwt", { session: false }),
+    userController.readUser
 );
 ```
 
@@ -877,7 +877,7 @@ To see this in action move to `contoller/index` file and search for readUser met
 
 ```
 module.exports.readUser = (req, res) => {
-	res.status(HttpStatus.OK).json({ user: req.user });
+    res.status(HttpStatus.OK).json({ user: req.user });
 };
 ```
 
@@ -920,17 +920,17 @@ Then we will have to define the options for the local strategy:
 
 ```
 const options = {
-	usernameField: process.env.USERNAME_FIELD,
-	password: process.env.PASSWORD_FIELD
+    usernameField: process.env.USERNAME_FIELD,
+    password: process.env.PASSWORD_FIELD
 };
 ```
 
-In usernameField and password we need to assign them with the properties in which username and password is coming from the request. Like for eg. from the frontend if you are sending the username through "email" object and password through "password" like 
+In usernameField and password, we need to assign them with the properties in which username and password is coming from the request. Like for eg. from the frontend if you are sending the username through "email" object and password through "password" like 
 
 ```
 {
-	email: "lazy-developer@email.com",
-	password: "toolazytoset"
+    email: "lazy-developer@email.com",
+    password: "toolazytoset"
 }
 ```
 
@@ -938,8 +938,8 @@ then the passport option will be as follows:
 
 ```
 const options = {
-	usernameField: "email",
-	password: "password"
+    usernameField: "email",
+    password: "password"
 };
 ```
 
@@ -947,19 +947,19 @@ and then we pass these options in new LocalStrategy() as below:
 
 ```
 passport.use(
-	new LocalStrategy(options, async (email, password, done) => {
-	await User.findOne({ email })
-		.then(user => {
-			if (user) {
-				bcrypt.compare(password, user.password, function(err, isMatch) {
-					if (err) done(err);
-					if (isMatch) return done(null, user);
-					return done(null, false);
-				});
-			}
-		})
-		.catch(err => done(err));
-	})
+    new LocalStrategy(options, async (email, password, done) => {
+    await User.findOne({ email })
+        .then(user => {
+            if (user) {
+                bcrypt.compare(password, user.password, function(err, isMatch) {
+                    if (err) done(err);
+                    if (isMatch) return done(null, user);
+                    return done(null, false);
+                });
+            }
+        })
+        .catch(err => done(err));
+    })
 );
 ```
 
@@ -975,8 +975,8 @@ Here we are saying whenever there is a post request on login then first authenti
 
 ```
 module.exports.loginUser = (req, res) => {
-	const token = jwt.sign({ id: req.user._id }, process.env.JWT_SECRET);
-	res.status(HttpStatus.OK).json({ token });
+    const token = jwt.sign({ id: req.user._id }, process.env.JWT_SECRET);
+    res.status(HttpStatus.OK).json({ token });
 };
 ```
 
